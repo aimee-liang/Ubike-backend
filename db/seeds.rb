@@ -40,3 +40,6 @@ bike_station_array.each do |bike_station|
 end
 
 aimee = User.create(name: "Aimee")
+# fsib = FavoriteStation.create(user_id: 2, bike_station_id: 235, location: "Grahan Ave & Metropolitan Ave", borough: "Brooklyn")
+# areview = Review.create(user_id: 2, bike_station_id: 235, comment: "Super clean and convenient location. Lots of birds in the area, so might poop on bike?")
+# acheckin = CheckIn.create(user_id: 2, bike_station_id: 235)

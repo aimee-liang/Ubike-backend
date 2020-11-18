@@ -2,22 +2,22 @@ class CheckInsController < ApplicationController
     #before_action :authorized
 
     def index
-        check_ins = Check_Ins.all
+        check_ins = CheckIn.all
         render json: check_ins
     end
 
     def show
-        check_in = Check_In.find_or_create_by(user_id: params[:user_id])
+        check_in = CheckIn.find_or_create_by(user_id: params[:user_id])
         render json: check_in
     end
 
     def create
-        check_in = Check_In.create(check_ins_params)
+        check_in = CheckIn.create(check_ins_params)
         render json: check_in
     end
 
     def destroy
-        check_in = Check_In.find(params[:id]).destroy
+        check_in = CheckIn.find(params[:id]).destroy
         render json: check_in
     end
 

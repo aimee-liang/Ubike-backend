@@ -2,28 +2,28 @@ class FavoriteStationsController < ApplicationController
     #before_action :authorized
 
     def index
-        favorite_stations = Favorite_Station.all
+        favorite_stations = FavoriteStation.all
         render json: favorite_stations
     end
 
     def show
-        favorite_station = Favorite_Station.find(favorite_station_params)
+        favorite_station = FavoriteStation.find(favorite_station_params)
         render json: favorite_station
     end
 
     def create
-        favorite_station = Favorite_Station.create(favorite_station_params)
+        favorite_station = FavoriteStation.create(favorite_station_params)
         render json: favorite_station
     end
 
     def update
-        favorite_station = Favorite_Station.find(params[:id])
+        favorite_station = FavoriteStation.find(params[:id])
         favorite_station.update(favorite_station_params)
         render json: favorite_station
     end
 
     def destroy
-        favorite_station = Favorite_Station.find(params[:id]).destroy
+        favorite_station = FavoriteStation.find(params[:id]).destroy
         render json: favorite_station
     end
 
