@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 BikeStation.destroy_all
+User.destroy_all
 
 require 'uri'
 require 'net/http'
@@ -37,3 +38,5 @@ bike_station_array.each do |bike_station|
         available_bike_racks: 8
     )
 end
+
+aimee = User.create(name: "Aimee", id: "1")
