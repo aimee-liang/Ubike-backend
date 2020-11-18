@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     # render json: { user: UserSerializer.new(current_user) }, status: :accepted
     # end
 
+    def index
+        users = User.all
+    end
+
     def show
         user = User.find_by(user_id: params[:user_id])
         render json: user
