@@ -39,4 +39,4 @@ bike_station_array.each do |bike_station|
     )
 end
 
-aimee = User.create(name: "Aimee", id: "1")
+aimee = User.create(name: "Aimee")
