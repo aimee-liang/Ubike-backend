@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
     #skip_before_action :authorized, only: [:create]
 
     # def profile
@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
+        render json: user
     end
 
     def show

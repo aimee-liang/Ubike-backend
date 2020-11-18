@@ -1,4 +1,4 @@
-class FavoriteStationsController < ApplicationController
+class Api::V1::FavoriteStationsController < ApplicationController
     #before_action :authorized
 
     def index

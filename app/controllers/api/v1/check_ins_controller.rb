@@ -1,4 +1,4 @@
-class CheckInsController < ApplicationController
+class Api::V1::CheckInsController < ApplicationController
     #before_action :authorized
 
     def index
