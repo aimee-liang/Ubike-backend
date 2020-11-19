@@ -6,7 +6,7 @@ class BikeStation < ApplicationRecord
     has_many :favorite_stations
 
     validates :available_bike_racks, numericality: { greater_than_or_equal_to: 0}
-    validates :available_bike_racks_cannot_be_zero
+    validate :available_bike_racks_cannot_be_zero
 
     def available_bike_racks_cannot_be_zero
         if available_bike_racks == 0
