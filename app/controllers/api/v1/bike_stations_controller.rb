@@ -1,5 +1,6 @@
 class Api::V1::BikeStationsController < ApplicationController
-
+    skip_before_action :authorized
+    
     def index
         bike_stations = BikeStation.all
         render json: bike_stations
