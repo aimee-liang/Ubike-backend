@@ -1,3 +1,3 @@
 class ReviewSerializer < ActiveModel::Serializer
-    attributes :user_id, :bike_station_id, :comment
+    attributes :id, :user_id, :bike_station_id, :comment
 end  

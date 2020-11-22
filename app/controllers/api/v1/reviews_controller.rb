@@ -6,7 +6,7 @@ class Api::V1::ReviewsController < ApplicationController
     end
 
     def show
-        review = Review.find_all_by(user_id: params[:user_id])
+        review = Review.where(bike_station_id: params[:bike_station_id])
         render json: review
     end
 

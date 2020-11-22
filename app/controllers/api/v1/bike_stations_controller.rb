@@ -18,7 +18,7 @@ class Api::V1::BikeStationsController < ApplicationController
 
 private
     def bike_station_params
-        params.require(:bike_station).permit(:location, :borough, :bike_station_id, :number_of_bike_racks, :available_bike_racks)
+        params.require(:bike_station).permit(:location, :borough, :number_of_bike_racks, :available_bike_racks)
     end
 
 
