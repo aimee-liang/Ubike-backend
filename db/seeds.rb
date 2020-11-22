@@ -40,3 +40,5 @@ bike_station_array.each do |bike_station|
 end
 
 aimee = User.create(name: "Aimee", username: "aimee", password_digest: BCrypt::Password.create('abc123'), email: "aimee@gmail.com")
+
+Review.create({user_id: "1", bike_station_id: "1", comment: "It's just ok. Nothing great"})

@@ -1,5 +1,5 @@
 class Api::V1::ReviewsController < ApplicationController
-    #before_action :authorized
+    skip_before_action :authorized
     def index
         reviews = Review.all
         render json: reviews
