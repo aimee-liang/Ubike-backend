@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index, :show]
+    skip_before_action :authorized, only: [:create, :index, :show, :update]
 
     def profile
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
@@ -29,11 +29,22 @@ class Api::V1::UsersController < ApplicationController
         render json: { error: 'failed to create user' }, status: :not_acceptable
     end
     end
+
+    def edit
+        user = User.find_by(id: params[:id])
+        render json: user
+    end
+
+    def update
+        @user = User.find_by(id: params[:id])
+        @user.update(user_params)
+        render json: @user
+    end
     
 
 private
     def user_params
-        params.require(:user).permit(:name, :username, :password, :email, :bike)
+        params.require(:user).permit(:name, :username, :password, :email, :bike, :bio)
     end
 
 
