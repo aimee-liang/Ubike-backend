@@ -30,7 +30,7 @@ class Api::V1::FavoriteStationsController < ApplicationController
 private
 
     def favorite_station_params
-        params.require(:favorite_station).permit(:user_id, :bike_station_id, :location, :borough)
+        params.require(:favorite_station).permit(:id, :user_id, :bike_station_id, :location, :borough)
     end
 
 
