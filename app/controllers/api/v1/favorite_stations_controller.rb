@@ -7,7 +7,7 @@ class Api::V1::FavoriteStationsController < ApplicationController
     end
 
     def show
-        favorite_station = FavoriteStation.find(favorite_station_params)
+        favorite_station = FavoriteStation.where(id: params[:id])
         render json: favorite_station
     end
 
