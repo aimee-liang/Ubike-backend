@@ -3,5 +3,5 @@ class CheckIn < ApplicationRecord
     belongs_to :bike_station
 
     # validates :user_id, uniqueness: :true
-    validates :user_id, :presence => true, :uniqueness => true
+    validates :user_id, uniqueness => {scope :id}
 end
