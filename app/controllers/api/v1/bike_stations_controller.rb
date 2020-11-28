@@ -7,7 +7,8 @@ class Api::V1::BikeStationsController < ApplicationController
     end
 
     def show
-        bike_station = BikeStation.find(bike_station_params)
+        # bike_station = BikeStation.find(bike_station_params)
+        bike_station = BikeStation.where(id: params[:id])
         render json: bike_station
     end
 
