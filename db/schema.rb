@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_040215) do
+ActiveRecord::Schema.define(version: 2020_11_28_024121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_11_25_040215) do
     t.string "email"
     t.text "bike"
     t.text "bio"
+    t.text "avatar"
   end
 
   add_foreign_key "check_ins", "bike_stations"
