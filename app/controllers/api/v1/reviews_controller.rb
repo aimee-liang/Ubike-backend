@@ -22,6 +22,6 @@ class Api::V1::ReviewsController < ApplicationController
 
 private
     def reviews_params
-        params.require(:review).permit(:user_id, :bike_station_id, :comment)
+        params.require(:review).permit(:id, :user_id, :bike_station_id, :comment, :username)
     end
 end
