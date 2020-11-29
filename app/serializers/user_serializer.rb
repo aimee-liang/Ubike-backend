@@ -1,12 +1,12 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :email, :bike, :name, :bio, :avatar, :reviews, :check_ins, :favorite_stations
+  attributes :id, :username, :email, :bike, :name, :bio, :avatar, :reviews, :check_in, :favorite_stations
 
   def reviews
     self.object.reviews
   end
 
-  def check_ins
-      self.object.check_ins
+  def check_in
+      self.object.check_in
   end
 
   def favorite_stations
