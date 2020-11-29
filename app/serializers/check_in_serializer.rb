@@ -1,3 +1,3 @@
 class CheckInSerializer < ActiveModel::Serializer
-    attributes :id, :user_id, :bike_station_id
+    attributes :id, :user_id, :bike_station_id, :location
 end  
