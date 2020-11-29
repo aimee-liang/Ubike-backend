@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_11_29_032250) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "location"
-    t.datetime "datetime"
+    t.string "datetime"
     t.index ["bike_station_id"], name: "index_check_ins_on_bike_station_id"
     t.index ["user_id"], name: "index_check_ins_on_user_id"
   end
