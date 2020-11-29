@@ -8,4 +8,11 @@ class User < ApplicationRecord
     has_many :bike_stations, through: :reviews
 
     validates :username, uniqueness: {case_sensitive: false}
+
+    validates :only_one_check_in, :message => "Can only be checked in at one place!"
+
+    def only_one_check_in
+        self.check_ins.length > 1
+    end
+
 end
