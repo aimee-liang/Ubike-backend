@@ -1,5 +1,5 @@
 class BikeStationSerializer < ActiveModel::Serializer
-    attributes :id, :location, :borough, :available_bike_racks, :number_of_bike_racks, :reviews, :check_ins, :favorite_stations
+    attributes :id, :location, :borough, :photos, :available_bike_racks, :number_of_bike_racks, :reviews, :check_ins, :favorite_stations
 
     def reviews
         self.object.reviews
