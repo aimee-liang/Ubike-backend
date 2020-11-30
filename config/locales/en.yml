@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        Check_Ins:
+          attributes:
+            user_id:
+              You've already checked in!: "Already checked in!"

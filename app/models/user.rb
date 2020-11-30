@@ -5,7 +5,8 @@ class User < ApplicationRecord
     has_many :reviews
     # has_many :check_ins
     has_one  :check_in
-    has_many :bike_stations, through: :check_ins
+    # has_many :bike_stations, through: :check_ins
+    has_one :bike_station, through: :check_in
     has_many :bike_stations, through: :reviews
 
     validates :username, uniqueness: {case_sensitive: false}
