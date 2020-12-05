@@ -1,5 +1,5 @@
 class Api::V1::FavoriteStationsController < ApplicationController
-    skip_before_action :authorized
+    before_action :authorized
 
     def index
         favorite_stations = FavoriteStation.all
